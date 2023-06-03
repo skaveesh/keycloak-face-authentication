@@ -1,0 +1,23 @@
+layers:
+  - name: "face-authentication"
+    modules:
+      - name: "com.skaveesh.face.auth"
+        artifacts:
+          - groupId: ${groupId}
+            artifactId: "keycloak-face-authentication"
+            version: ${version}
+            packaging: "jar"
+        dependencies:
+          - name: "com.amazonaws"
+  - name: "amazonaws"
+    modules:
+      - name: "com.amazonaws"
+        artifacts:
+          - groupId: "com.amazonaws"
+            artifactId: "aws-java-sdk-rekognition"
+            version: "1.12.115"
+            packaging: "jar"
+          - groupId: "com.amazonaws"
+            artifactId: "aws-java-sdk-core"
+            version: "1.12.115"
+            packaging: "jar"
